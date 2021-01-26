@@ -22,9 +22,20 @@ body, html{
     position: absolute;
 	transform: translate(-50%, -50%);
 }
+
+.search{
+	position: absolute;
+	top: 20%;
+	left: 50%;
+}
+
+.search > form {
+	transform: translateX(-50%);
+}
+
 .container{
     
-	top: 30%;
+	top: 45%;
 	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -110,20 +121,23 @@ h1{
     padding: 0 0 0 0;
 }
 .footer{
+	top: 90%;
+	left: 50%;
     color: #fff;
 	text-align: center;
     bottom: 150px;
-    position:relative;
+    position: absolute;
 	line-height: 100%;
 	font-size: 8px;
 	text-shadow: 1px 1px 5px #707070;
+	transform: translate(-50%, -50%);
 }
 
 
 
 .container2{
     
-	top: 56%;
+	top: 70%;
 	left: 40.5%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -138,7 +152,7 @@ h1{
 
 .container3{
     
-	top: 56%;
+	top: 70%;
 	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -153,7 +167,7 @@ h1{
 
 .container4{
     
-	top: 56%;
+	top: 70%;
 	left: 59.5%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -171,8 +185,6 @@ h1{
 
 
 
-
-
 .widget2 .mid{
     text-align: center;
     font-size: 26px;
@@ -181,16 +193,16 @@ h1{
 }
 
 .widget2 .mid div{
-	margin: 15px;
 	text-align: center;
-	line-height: 100%;
 	font-size: 19px;
 	text-shadow: 1px 1px 5px #707070;
 }
 
-.mid div span{
-	display: block;
+.widget2 > .mid > h6{
+	padding-top: 35px;
+	margin-bottom: 10px;
 }
+
 
 .widget3 .mid1{
     text-align: center;
@@ -200,15 +212,14 @@ h1{
 }
 
 .widget3 .mid1 div{
-	margin: 15px;
 	text-align: center;
-	line-height: 100%;
 	font-size: 19px;
 	text-shadow: 1px 1px 5px #707070;
 }
 
-.mid1 div span{
-	display: block;
+.widget3 > .mid1 > h6{
+	padding-top: 35px;
+	margin-bottom: 10px;
 }
 
 .widget4 .mid2{
@@ -219,13 +230,12 @@ h1{
 }
 
 .widget4 .mid2 div{
-	margin: 15px;
 	text-align: center;
-	line-height: 100%;
 	font-size: 19px;
 	text-shadow: 1px 1px 5px #707070;
 }
 
-.mid2 div span{
-	display: block;
+.widget4 > .mid2 > h6{
+	padding-top: 35px;
+	margin-bottom: 10px;
 }
