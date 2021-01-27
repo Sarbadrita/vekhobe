@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins|Raleway:wght@100;200;300;400;500;600&display=swap');
 
 body, html{
 	height: 100%;
@@ -12,8 +12,8 @@ body, html{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	filter: blur(20px);
-	-webkit-filter: blur(20px);
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
 }
 
 .header{
@@ -31,10 +31,59 @@ body, html{
 
 .search > form {
 	transform: translateX(-50%);
+	position: relative;
+	display: inline-block;
+}
+
+.search > form > input{
+	float: left;
+	height: 40px;
+	width: 280px;
+	border-radius: 12px 0 0 12px;
+	padding-left: 15px;
+	border: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	background: rgba(299, 299, 299, 0.4);
+	color: rgb(236, 236, 236);
+}
+
+.search > form > input[type="text"]{
+	font-size: 22px;
+}
+
+.search > form > input:focus{
+	outline: none;
+	border: none;
+}
+
+.search > form > input::placeholder{
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	color: rgb(65, 65, 65);
+}
+
+.search > form > button{
+	float: right;
+	height: 42px;
+	border-radius: 0 12px 12px 0;
+	border: none;
+	background: rgba(299, 299, 299, 0.4);
+}
+
+.search > form > button:focus{
+	outline: none;
+	border: none;
+}
+
+.search > form > button > i{
+	font-size: 22px;
+	padding: 4px 6px 5px 6px;
+	color: rgb(236, 236, 236);
 }
 
 .container{
-    
 	top: 45%;
 	left: 50%;
 	position: absolute;
