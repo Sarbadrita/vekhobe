@@ -16,10 +16,12 @@
 	</div>
 	
 	<div class="search">
-		<form>
-			<input type="text" placeholder="Search location..." name="location">
-			<button id="loc" type="button"><a><i class="fas fa-location-arrow"></i></a></button>
-			<button id="subform" type="submit"><a><i class="fas fa-search"></i></a></button>
+		<form autocomplete="off">
+			<div class="autocomplete">
+				<input id="inputloc" type="text" placeholder="Search location..." name="location">
+				<button id="currentloc" type="button"><a><i class="fas fa-location-arrow"></i></a></button>
+				<button id="subform" type="submit"><a><i class="fas fa-search"></i></a></button>
+			</div>
 		</form>
 	</div>
 
@@ -28,7 +30,7 @@
 		<div class="widget">
 			<div class="left">
 				<img src="images/cloud.svg" class="icon">
-				<h5 class="weather-status">Partly Cloud</h5>
+				<h5 class="weather-status">Partly Cloudy</h5>
 			</div>
 			<div class="right">
 				<h5 class="city">Kolkata</h5>
@@ -84,6 +86,8 @@
     <div class="footer">
     	<h2>Hello! I am Windy</h2>
         <h2>your weather assistant, just ask me and get weather forcasts as fast as wind</h2>
-    </div>
+	</div>
+	
+	<script src="app.js"></script>
 </body>
 </html>

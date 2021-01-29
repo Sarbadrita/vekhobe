@@ -25,7 +25,7 @@ body, html{
 
 .search{
 	position: absolute;
-	top: 20%;
+	top: 16%;
 	left: 50%;
 }
 
@@ -35,12 +35,12 @@ body, html{
 	display: inline-block;
 }
 
-.search > form > input{
+.search > form > div > input{
 	float: left;
 	height: 45px;
 	width: 280px;
-	border-radius: 12px 0 0 12px;
-	padding-left: 15px;
+	border-radius: 13px 0 0 13px;
+	padding-left: 25px;
 	border: none;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
@@ -48,23 +48,23 @@ body, html{
 	color: rgb(0, 34, 230)
 }
 
-.search > form > input[type="text"]{
+.search > form > div > input[type="text"]{
 	font-size: 22px;
 }
 
-.search > form > input:focus{
+.search > form > div > input:focus{
 	outline: none;
 	border: none;
 }
 
-.search > form > input::placeholder{
+.search > form > div > input::placeholder{
 	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
 	font-weight: 300;
 	color: rgb(239, 239, 239);
 }
 
-.search > form > button{
+.search > form > div > button{
 	height: 47px;
 	border: none;
 	background: rgba(299, 299, 299, 0.4);
@@ -72,27 +72,62 @@ body, html{
 
 #subform{
 	float: right;
-	border-radius: 0 12px 12px 0;
+	border-radius: 0 13px 13px 0;
 }
 
-.search > form > button:focus{
+.search > form > div > button:focus{
 	outline: none;
 	border: none;
 }
 
-.search > form > button > a{
+.search > form > div > button > a{
 	font-size: 21px;
 	padding: 7px;
 	color: rgb(236, 236, 236);
 }
 
-.search > form > button > a:hover{
+.search > form > div > button > a:hover{
 	color: rgb(21, 56, 255);
 	cursor: pointer;
 }
 
+.autocomplete{
+	position: relative;
+	display: inline-block;
+}
+
+.autocomplete-items {
+	position: absolute;
+	z-index: 100;
+	height: 100px;
+	overflow: hidden;
+	top: 100%;
+	left: 0;
+	right: 0;
+	border-radius: 0 0 18px 18px;
+}
+
+.autocomplete-items div {
+	font-size: 14px;
+	padding: 2px;
+	padding-left: 25px;
+	cursor: pointer;
+	background: rgba(299, 299, 299, 0.4);
+	color: #ececec;
+}
+
+.autocomplete-items div:hover {
+	background-color: #1135ff;
+}
+
+.autocomplete-active {
+	background-color: #1135ff !important;
+	color: #ffffff;
+}
+
 .container{
-	top: 45%;
+	z-index: 1;
+	top: 50%;
 	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -194,7 +229,7 @@ h1{
 
 .container2{
     
-	top: 70%;
+	top: 74%;
 	left: 40.5%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -209,7 +244,7 @@ h1{
 
 .container3{
     
-	top: 70%;
+	top: 74%;
 	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
@@ -224,7 +259,7 @@ h1{
 
 .container4{
     
-	top: 70%;
+	top: 74%;
 	left: 59.5%;
 	position: absolute;
 	transform: translate(-50%, -50%);
