@@ -10,7 +10,7 @@
 	<script src="https://kit.fontawesome.com/df1fe34d47.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<!-- Background Image -->
+<!-- Background Image -->
 	<div class="bg"></div>
     <div class="header">
         <h1>Windy</h1>
@@ -20,7 +20,7 @@
 		<form autocomplete="off">
 			<div class="autocomplete">
 				<input id="inputloc" type="text" placeholder="Search location..." name="location">
-				<button id="currentloc" type="button"><a><i class="fas fa-location-arrow"></i></a></button>
+				<button id="currentloc" type="button" onclick="getLocation()"><a><i class="fas fa-location-arrow"></i></a></button>
 				<button id="subform" type="submit"><a><i class="fas fa-search"></i></a></button>
 			</div>
 		</form>
@@ -90,5 +90,6 @@
 	</div>
 	
 	<script src="app.js"></script>
+
 </body>
 </html>

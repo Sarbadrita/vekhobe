@@ -1,4 +1,45 @@
-/*Windy 0.4 Initial*/
+/*WINDY 0.4 INITIAL*/
+
+let userlocation = {};
+let data;
+
+function getLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(geoloc, error);
+    }
+    else{
+        alert("Geolocation is not supported by your browser.");
+    }
+}
+
+function geoloc(position){
+    userlocation.latitude = position.coords.latitude;
+    userlocation.longitude = position.coords.longitude;
+    userlocation.type= 'GPS';
+    requestBack();
+}
+
+function error(){
+    alert("Unable to retrieve your location.");
+}
+
+function requestBack(){
+    let url = 'main.php';
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userlocation)
+    }).then(res => res.json())
+        .then(data => update(data))
+        .catch(error => console.log('error'));
+}
+
+function update(data){
+    console.log(data);
+}
+
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
