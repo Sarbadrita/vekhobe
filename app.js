@@ -38,6 +38,12 @@ function requestBack(){
 
 function update(data){
     console.log(data);
+    document.getElementById('state').innerHTML = data.list[0].weather[0].main;
+    document.getElementById('city').innerHTML = data.city.name;
+    document.getElementById('temp').innerHTML = data.list[0].main.temp + "&#176;c";
+    document.getElementById('wind_speed').innerHTML = data.list[0].wind.speed + " kmph";
+    document.getElementById('cloud_cover').innerHTML = data.list[0].clouds.all + " %";
+    document.getElementById('pressure').innerHTML = data.list[0].main.pressure + " mb";
 }
 
 

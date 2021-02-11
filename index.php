@@ -31,22 +31,16 @@
 		<div class="widget">
 			<div class="left">
 				<img src="images/cloud.svg" class="icon">
-				<h5 class="weather-status">Partly Cloudy</h5>
+				<h5 id="state" class="weather-status">Partly Cloudy</h5>
 			</div>
 			<div class="right">
-				<h5 class="city">Kolkata</h5>
-				<h5 class="degree">12&#176;c</h5>
+				<h5 id="city" class="city">Kolkata</h5>
+				<h5 id="temp" class="degree">12&#176;c</h5>
 			</div>
 			<div class="bottom">
-				<div>
-					Wind Speed <span>22 kmph</span>
-				</div>
-				<div>
-					Cloud Cover <span>22%</span>
-				</div>
-				<div>
-					Pressure <span>1010 mb</span>
-				</div>
+				<div>Wind Speed <span id="wind_speed">22 kmph</span></div>
+				<div>Cloud Cover <span id="cloud_cover">22%</span></div>
+				<div>Pressure <span id="pressure">1010 mb</span></div>
 			</div>
 		</div>
 		<!-- End of weather widget -->
@@ -58,9 +52,9 @@
 		<!-- Weather Widget -->
 		<div class="widget2">
 			<div class="mid">
-				<h6>Wednesday</h6>
-				<div>13&#176;c</div>
-                <div >Clear</div>
+				<h6 id="day_1">Wednesday</h6>
+				<div id="temp_1">13&#176;c</div>
+                <div id="state_1" >Clear</div>
             </div>
         </div>
     </div>
@@ -68,9 +62,9 @@
 		<!-- Weather Widget -->
 		<div class="widget3">
 			<div class="mid1">
-                <h6>Thursday</h6>
-				<div>11&#176;c</div>
-                <div>Clear</div>
+                <h6 id="day_2">Thursday</h6>
+				<div id="temp_2">11&#176;c</div>
+                <div id="state_2">Clear</div>
             </div>
         </div>
     </div>
@@ -78,9 +72,9 @@
 		<!-- Weather Widget -->
 		<div class="widget4">
 			<div class="mid2">
-                <h6>Friday</h6>
-				<div>15&#176;c</div>
-                <div>Cloudy</div>
+                <h6 id="day_3">Friday</h6>
+				<div id="temp_3">15&#176;c</div>
+                <div id="state_3">Cloudy</div>
             </div>
         </div>
     </div>
