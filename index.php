@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<!-- Windy 0.4 Initial -->
+	<!-- Windy 0.8 Initial -->
 <head>
 	<title>Windy</title>
 
@@ -53,7 +53,8 @@
 		<div class="widget2">
 			<div class="mid">
 				<h6 id="day_1">Wednesday</h6>
-				<div id="temp_1">13&#176;c</div>
+				<div id="maxtemp_1">13&#176;c</div>
+                <div id="mintemp_1">13&#176;c</div>
                 <div id="state_1" >Clear</div>
             </div>
         </div>
@@ -63,7 +64,8 @@
 		<div class="widget3">
 			<div class="mid1">
                 <h6 id="day_2">Thursday</h6>
-				<div id="temp_2">11&#176;c</div>
+				<div id="maxtemp_2">11&#176;c</div>
+                <div id="mintemp_2">11&#176;c</div>
                 <div id="state_2">Clear</div>
             </div>
         </div>
@@ -73,7 +75,8 @@
 		<div class="widget4">
 			<div class="mid2">
                 <h6 id="day_3">Friday</h6>
-				<div id="temp_3">15&#176;c</div>
+				<div id="maxtemp_3">15&#176;c</div>
+                <div id="mintemp_3">15&#176;c</div>
                 <div id="state_3">Cloudy</div>
             </div>
         </div>

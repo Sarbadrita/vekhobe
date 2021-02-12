@@ -33,17 +33,37 @@ function requestBack(){
         body: JSON.stringify(userlocation)
     }).then(res => res.json())
         .then(data => update(data))
-        .catch(error => console.log('error'));
+        .catch(error => console.log(error));
 }
 
 function update(data){
     console.log(data);
-    document.getElementById('state').innerHTML = data.list[0].weather[0].main;
-    document.getElementById('city').innerHTML = data.city.name;
-    document.getElementById('temp').innerHTML = data.list[0].main.temp + "&#176;c";
-    document.getElementById('wind_speed').innerHTML = data.list[0].wind.speed + " kmph";
-    document.getElementById('cloud_cover').innerHTML = data.list[0].clouds.all + " %";
-    document.getElementById('pressure').innerHTML = data.list[0].main.pressure + " mb";
+    document.getElementById('state').innerHTML = data.current_data.weather[0].main;
+    document.getElementById('city').innerHTML = data.current_data.name;
+    document.getElementById('temp').innerHTML = Math.floor(data.current_data.main.temp) + "&#176;c";
+    document.getElementById('wind_speed').innerHTML = Math.floor(data.current_data.wind.speed) + " kmph";
+    document.getElementById('cloud_cover').innerHTML = data.current_data.clouds.all + " %";
+    document.getElementById('pressure').innerHTML = data.current_data.main.pressure + " mb";
+    document.getElementById('day_1').innerHTML = getWeekDay(data.forecast_data.daily[1].dt);
+    document.getElementById('day_2').innerHTML = getWeekDay(data.forecast_data.daily[2].dt);
+    document.getElementById('day_3').innerHTML = getWeekDay(data.forecast_data.daily[3].dt);
+    document.getElementById('maxtemp_1').innerHTML = Math.floor(data.forecast_data.daily[0].temp.max) + "&#176;c";
+    document.getElementById('maxtemp_2').innerHTML = Math.floor(data.forecast_data.daily[1].temp.max) + "&#176;c";
+    document.getElementById('maxtemp_3').innerHTML = Math.floor(data.forecast_data.daily[2].temp.max) + "&#176;c";
+    document.getElementById('mintemp_1').innerHTML = Math.floor(data.forecast_data.daily[0].temp.min) + "&#176;c";
+    document.getElementById('mintemp_2').innerHTML = Math.floor(data.forecast_data.daily[1].temp.min) + "&#176;c";
+    document.getElementById('mintemp_3').innerHTML = Math.floor(data.forecast_data.daily[2].temp.min) + "&#176;c";
+    document.getElementById('state_1').innerHTML = data.forecast_data.daily[0].weather[0].main;
+    document.getElementById('state_2').innerHTML = data.forecast_data.daily[1].weather[0].main;
+    document.getElementById('state_3').innerHTML = data.forecast_data.daily[2].weather[0].main;
+}
+
+function getWeekDay(time){
+    let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let date = new Date(time * 1000);
+    let day = date.getDay();
+    console.log(date);
+    return(weekday[day]);
 }
 
 
