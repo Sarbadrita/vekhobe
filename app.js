@@ -1,4 +1,4 @@
-/*WINDY 0.4 INITIAL*/
+/*WINDY 0.9.9 Beta*/
 
 let userlocation = {
     autocomplete: false
@@ -6,8 +6,12 @@ let userlocation = {
 let data;
 var fetchedloc = [];
 
-document.getElementById('subform').addEventListener("click", function(){
+form = document.getElementById('subform');
+form.addEventListener("click", function(){
+    userlocation.type = 'Manual';
+    userlocation.input = document.getElementById('inputloc').value;
     requestBack(userlocation);
+    document.getElementById('search_form').reset();
 });
 
 function getGPSLocation(){
@@ -33,7 +37,7 @@ function error(){
 async function autocompleteInput(text){        //getLocation feeds backend with user input and implements autocomplete.
     userlocation.input = text;
     userlocation.autocomplete = true;
-    userlocation.type= 'Manual';
+    userlocation.type= 'Suggestions';
     const data = await requestBack(userlocation);
 }
 
@@ -81,9 +85,7 @@ async function pushIntoArray(data){
     data.city_data.items.forEach(function(array){
         boxItems.push(array.address.city);
     });
-    console.log(boxItems);
     fetchedloc = fetchedloc.concat(boxItems);
-
     console.log(fetchedloc);
 }
 
