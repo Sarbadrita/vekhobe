@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<!-- Windy 0.8 Initial -->
+	<!-- Windy 0.95 Initial -->
 <head>
 	<title>Windy</title>
 
@@ -20,7 +20,7 @@
 		<form autocomplete="off">
 			<div class="autocomplete">
 				<input id="inputloc" type="text" placeholder="Search location..." name="location">
-				<button id="currentloc" type="button" onclick="getLocation()"><a><i class="fas fa-location-arrow"></i></a></button>
+				<button id="currentloc" type="button" onclick="getGPSLocation()"><a><i class="fas fa-location-arrow"></i></a></button>
 				<button id="subform" type="submit"><a><i class="fas fa-search"></i></a></button>
 			</div>
 		</form>
